@@ -1,0 +1,70 @@
+<div class="preloader" *ngIf="UploadImageLoading">
+    <div class="clear-loading loading-effect-2">
+        <span></span>
+    </div>
+</div>
+
+
+
+<form [formGroup]="articleForm" (ngSubmit)="onSubmit()">
+
+
+
+        <div class="col-xs-12 text-right">
+                <button type="button" (click)="onCancel()" class="btn btn-default"
+                    style="margin-right: 10px;display: inline-block;">CLEAR</button>
+                <button type="submit" *ngIf="!editMode" [disabled]="articleForm.invalid" class="btn btn-success">ADD</button>
+                <button type="submit" *ngIf="editMode" [disabled]="articleForm.invalid" class="btn btn-success">Save</button>
+            </div>
+            
+            <div class="clearfix"></div>
+            
+            <hr/>
+            
+            <div *ngIf="imgURL" class="img-thumbnail">
+            
+                <img [src]="imgURL" alt="">
+            </div>
+            <div class="clearfix"></div>
+            <br />
+
+
+
+
+    <div class="row">
+        <div class="col-xs-12">
+            <label>Image</label>
+            <app-upload-image (Image)="Image($event)" (imgBase64)="imgBase64($event)">
+            </app-upload-image>
+
+        </div>
+        <div class="col-xs-12">
+            <label>Title</label>
+            <input type="text" formControlName="title" class="form-control animated ">
+        </div>
+        <div class="col-xs-12">
+            <label>Description</label>
+            <input type="text" formControlName="description" class="form-control animated ">
+        </div>
+        <div class="col-xs-12">
+            <label>Category</label>
+            <input type="text" formControlName="category" class="form-control animated ">
+        </div>
+        <div class="col-xs-12">
+            <label>Body</label>
+
+            <app-editor [dbValue]="editorVal" (editorValue)="editorValue($event)"></app-editor>
+
+        </div>
+        <div class="clearfix"></div>
+        <hr>
+        <div class="col-xs-12 text-right">
+            <button type="button" (click)="onCancel()" class="btn btn-default"
+                style="margin-right: 10px;display: inline-block;">CLEAR</button>
+            <button type="submit" *ngIf="!editMode" [disabled]="articleForm.invalid"
+                class="btn btn-success">ADD</button>
+            <button type="submit" *ngIf="editMode" [disabled]="articleForm.invalid"
+                class="btn btn-success">Save</button>
+        </div>
+    </div>
+</form>

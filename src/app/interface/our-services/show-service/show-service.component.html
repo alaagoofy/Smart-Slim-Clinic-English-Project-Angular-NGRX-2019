@@ -1,0 +1,107 @@
+<app-inner-header *ngIf="pageLoad">
+    <ng-container class="pageTitle"> {{ Service.title }} </ng-container>
+    <ng-container class="pageTree">
+        <li>
+            <a routerLink="/" title="">Home</a>
+            <span class="arrow_right"></span>
+        </li>
+        <li>
+            <a routerLink="/articles" title="">Services</a>
+            <span class="arrow_right"></span>
+        </li>
+        <li>
+            {{ Service.title }}
+        </li>
+    </ng-container>
+</app-inner-header>
+
+
+
+<section class="flat-row flat-main-blog" *ngIf="pageLoad">
+    <div class="flat-row flat-main-blog">
+        <div class="container">
+
+            <!---->
+
+            <div class="row">
+                <div class="col-md-12">
+                    <article class="post-single">
+
+                        <div class=" entry-header"
+                            style="border-bottom: 1px solid #ccc;margin-bottom: 20px;padding-bottom: 10px;">
+                            <ul class="entry-meta-post pull-right" style="margin-top: -25px;">
+                                <li class="topic text-right text-uppercase">
+                                    <small><b>Health,</b></small> </li>
+                                <li>{{ Service.Service }}</li>
+
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-4 col-xs-12">
+                              
+                              
+                                <h1 style="margin:0;border-bottom: 1px solid #ccc;">Latest Articles</h1>
+                                
+                                <app-latest-list></app-latest-list>
+                            </div>
+                            <div class="col-md-8 col-xs-12">
+
+                                <div class="featured-post">
+                                    <img [src]="Service.imageURL" />
+                                </div>
+
+                                <div class="entry-post">
+                                    <h2>
+                                        {{ Service.title }}
+                                    </h2>
+                                    <hr />
+                                    <div class="entry-content" [innerHTML]="Service.content | saveHtml">
+
+                                    </div>
+
+<hr />
+                                    <app-comments [serviceKey]="Service.key"></app-comments>
+<br/>
+                                    <ul class="social">
+                                        <li>
+                                            <a href="#" title="">
+                                                <i class="ti-facebook" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="">
+                                                <i class="ti-twitter-alt" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="">
+                                                <i class="ti-instagram" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="">
+                                                <i class="ti-google" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="">
+                                                <i class="ti-pinterest" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </article>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>

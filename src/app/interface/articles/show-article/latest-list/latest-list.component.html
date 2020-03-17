@@ -1,0 +1,29 @@
+
+
+<div *ngFor="let article of randomArticles">
+<div class="row">
+    <div  style="padding:20px 0">
+   
+        <div class="reviewer-info">
+          
+  
+        </div>
+        <div class="review-content">
+                <div class="reviewer-image col-md-4">
+                        <img src="{{ article.imageURL }}" alt="">
+                    </div>
+            <div class="row col-md-8"> 
+                    <h5 class="name">
+                      <a routerLink="/articles/{{ article.key }}">  {{ article.title }}
+                        </a>
+                      </h5>
+                    <small class="pull-right h6">{{ article.category }}</small>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<hr/>
+</div>
+
+

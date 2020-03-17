@@ -1,0 +1,31 @@
+<div class="col-lg-4 col-sm-6" *ngFor="let article of randomArticles">
+        <article class="blog-post">
+            <div class="featured-post">
+                <a routerLink="/articles/{{ article.key }}" title="">
+                    <img [src]="article.imageURL" alt="{{ article.title }}">
+                    <div class="overlay"></div>
+                </a>
+            </div><!-- /.featured-post -->
+            <div class="content-post">
+                <div class="entry-post">
+                    <ul class="entry-meta">
+                        <li class="topic">
+                            <a routerLink="/articles/{{ article.key }}" title="">{{ article.category }}</a>
+                        </li>
+                        <li class="date">
+                            <a routerLink="/articles/{{ article.key }}" title="">{{ article.dateTime }}</a>
+                        </li>
+                    </ul>
+                    
+                    <h2 class="entry-title">
+                        <a routerLink="/articles/{{ article.key }}" title="">
+                            {{ article.title }}
+                        </a>
+                    </h2>
+                  
+                </div>
+              
+            
+            </div><!-- /.content-post -->
+        </article><!-- /.blog-post -->
+    </div>

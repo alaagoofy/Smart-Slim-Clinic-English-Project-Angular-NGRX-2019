@@ -1,0 +1,39 @@
+<app-inner-header>
+  <ng-container class="pageTitle">Add / Edit Services</ng-container>
+
+  <ng-container class="pageTree">
+    <li>
+      <a routerLink="/" title="">Home</a>
+      <span class="arrow_right"></span>
+    </li>
+    <li>
+      <a routerLink="/admin" title=""> Admin Panel</a>
+      <span class="arrow_right"></span>
+    </li>
+    <li>
+     Articles
+    </li>
+  </ng-container>
+</app-inner-header>
+
+
+<section class="flat-row flat-main-blog">
+
+  <div class="container">
+
+
+    <div class="row">
+      <div class="col-md-4 col-xs-12">
+        <app-list></app-list>
+      </div>
+
+      <div class="col-md-8 col-xs-12">
+
+        <router-outlet></router-outlet>
+      </div>
+
+    </div>
+
+
+  </div>
+</section>

@@ -1,0 +1,34 @@
+
+
+<div class="col-lg-4 col-sm-6" style="margin-bottom:30px">
+    <article class="blog-post">
+        <div class="featured-post">
+            <a [routerLink]="[Article.key]" title="">
+                <img src="{{Article.imageURL}}" alt="">
+                <div class="overlay"></div>
+            </a>
+        </div>
+        <div class="content-post">
+            <div class="entry-post">
+                <ul class="entry-meta">
+                    <li class="topic">
+                        <a [routerLink]="[Article.key]" title="">Health</a>
+                    </li>
+                    <li class="date">
+                        <a [routerLink]="[Article.key]" title="">{{Article.dateTime}}</a>
+                    </li>
+                </ul>
+                
+                <h2 class="entry-title">
+                    <a [routerLink]="[Article.key]" title="">
+                            {{Article.title}}
+                    </a>
+                </h2>
+            </div>
+      
+        
+        </div>
+    </article>
+</div>
+
+

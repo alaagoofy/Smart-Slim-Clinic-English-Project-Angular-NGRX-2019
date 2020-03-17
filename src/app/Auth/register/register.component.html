@@ -1,0 +1,96 @@
+<section class="flat-row flat-login style2 parallax1">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2">
+      </div><!-- /.col-lg-2 -->
+      <div class="col-lg-4 col-sm-6">
+        <div class="login-form style2">
+          <h3>Register</h3>
+          <form #userForm="ngForm" (ngSubmit)=(register(userForm.value))>
+            <div class="wrap-login">
+              <label>Profile Picture</label>
+              <app-upload-avatar
+                (Image)="Image($event)"
+                (imgBase64)="imgBase64($event)">
+              </app-upload-avatar>
+
+            </div>
+            <div class="clearfix"></div>
+            <br>
+            <div class="wrap-login">
+              <input type="text" class="first-name"
+                     placeholder="Full Name"
+                     ngModel name="name">
+            </div>
+            <div class="wrap-login">
+              <input type="text" class="last-name"
+                     placeholder="Mobile"
+                     ngModel name="phone">
+            </div>
+            <div class="wrap-login">
+              <input type="text" class="username"
+                     placeholder="Email address"
+                     ngModel
+                     name="email" >
+            </div>
+            <div class="wrap-login">
+
+              <input type="password" class="username"
+                     placeholder="Password"
+                     ngModel
+                     name="password">
+            </div>
+
+            <div class="wrap-login">
+
+              <select name="country"
+                      ngModel
+                      class="username">
+                <option>Country</option>
+              </select>
+            </div>
+            <div class="wrap-login">
+
+              <select name="city"
+                      ngModel
+                      class="username">
+                <option>Select City</option>
+              </select>
+            </div>
+            <div class="wrap-login">
+
+              <input type="text" class="username"
+                     placeholder="address"
+                     ngModel
+                     name="address">
+            </div>
+            <div class="wrap-login">
+
+              <select name="gender"
+                      ngModel
+                      class="username">
+                <option>Select Gender</option>
+              </select>
+            </div>
+
+
+            <div class="btn-more">
+              <button type="submit" title="">Register</button>
+            </div>
+          </form><!-- /form -->
+        </div><!-- /.login-form style2 -->
+      </div><!-- /.col-lg-4 col-sm-6 -->
+      <div class="col-lg-5 col-sm-6">
+        <div class="login-social">
+          <div>For faster login or register use your social account.</div>
+          <a href="#" class="facebook" title=""><span class="ti-facebook"></span>Login with Facebook</a>
+          <p>or</p>
+          <a href="#" class="twitter" title=""><span class="ti-twitter-alt"></span>Login with Twitter</a>
+        </div><!-- /.login-social -->
+      </div><!-- /.col-lg-5 col-sm-6 -->
+      <div class="col-lg-1">
+      </div><!-- /.col-lg-1 -->
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+  <div class="overlay"></div>
+</section>

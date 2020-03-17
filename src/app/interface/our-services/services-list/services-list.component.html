@@ -1,0 +1,27 @@
+<app-inner-header>
+        <ng-container class="pageTitle"> Our Services</ng-container>
+        <ng-container class="pageTree">
+                <li>
+                        <a routerLink="/" title="">Home</a>
+                         <span class="arrow_right"></span>
+                    </li>
+            <li>
+                Services
+            </li>
+        </ng-container>
+    </app-inner-header>
+<section class="flat-row flat-main-blog">
+        <div class="flat-row flat-main-blog">
+            <div class="container">
+            <div class="row">
+            <!--Get & Show Articles-->
+                <app-Service-card *ngFor="let Service of (ServicesState | async).Services;let i = index"
+                    [Service]="Service" [index]="i">
+
+                </app-Service-card>
+            </div>
+
+        </div>
+    </div>
+
+</section>

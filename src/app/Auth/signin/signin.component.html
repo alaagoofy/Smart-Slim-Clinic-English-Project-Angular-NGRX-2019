@@ -1,0 +1,45 @@
+    1`<section class="flat-row flat-login parallax1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2">
+            </div><!-- /.col-lg-2 -->
+            <div class="col-lg-4 col-sm-6">
+                <div class="login-form">
+                    <h3>Hi, welcome back!</h3>
+                    <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
+                        <div class="wrap-login">
+                            <label>Email address *</label>
+                            <input type="text" class="username"
+                            ngModel #email="ngModel"
+                            name="email">
+                        </div>
+                        <div class="wrap-login">
+                            <label>Password *</label>
+                            <input type="password" class="password"
+                            ngModel #password="ngModel"
+                            name="password">
+                        </div>
+                        <div class="wrap-login remember">
+                            <span class="ti-layout-width-full"></span>Remember me
+                            <a href="#" class="forgot" title="">Forgot password ?</a>
+                        </div>
+                        <div class="btn-more">
+                            <button type="submit">Login</button>
+                        </div>
+                    </form><!-- /form -->
+                </div><!-- /.login-form -->
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-5 col-sm-6">
+                <div class="login-social">
+                    <div>For faster login or register use your social account.</div>
+                    <a href="#" class="facebook" title=""><span class="ti-facebook"></span>Login with Facebook</a>
+                    <p>or</p>
+                    <a href="#" class="google" title=""><span class="ti-twitter-alt"></span>Login with Twitter</a>
+                </div><!-- /.login-social -->
+            </div><!-- /.col-lg-5 -->
+            <div class="col-lg-1">
+            </div><!-- /.col-lg-1 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+    <div class="overlay"></div>
+</section>

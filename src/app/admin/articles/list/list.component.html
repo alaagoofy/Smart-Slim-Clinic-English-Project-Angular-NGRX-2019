@@ -1,0 +1,40 @@
+<div class="form-group" style="margin:20px 0 5px !important">
+    <input type="text" style="margin:10px 0 0 !important" placeholder="Search" class="form-control underLine">
+</div>
+<div class="list-group sideBar">
+
+    <div *ngFor="let article of (ArticlesState | async).Articles; let i = index" routerLinkActive="active"
+     class="list-group-item clearfix"
+        style="margin:10px  ;position:relative;">
+       
+
+<div class="row">
+    <div class="col-md-10 col-xs-10">
+
+<div class="row">
+    <div class="col-md-3 col-xs-3">
+            <img [src]="article.imageURL" alt="{{ article.title }}" class="img-responsive" style="max-width: 50px;">
+
+    </div>
+    <div class="col-md-9 col-xs-9">
+            <a class="pull-left"[routerLink]="[i]">
+                    <span class="list-group-item-heading">
+                        {{ article.title }}</span>
+            </a>
+    </div>
+
+</div>
+
+        
+    </div>
+    <div class="col-md-2 col-xs-2">
+        <a class="pull-right" (click)="deleteArticle(i,article.key)">
+            <i class="fa fa-trash-o"></i>
+        </a>
+    </div>
+</div>
+
+        <div class="clearfix"></div>
+   
+    </div>
+</div>
